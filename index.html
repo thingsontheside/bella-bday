@@ -1,0 +1,92 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+  <title>Happy Birthday!</title>
+  <link rel="stylesheet" href="style.css" />
+</head>
+<body>
+  <div class="container">
+
+    <h1 class="animated bounce">🎉 С днём рождения, Белла! 🎂</h1>
+
+    <!-- Surprise Gift Box -->
+    <div class="gift-box" id="giftBox" tabindex="0" role="button" aria-label="Open gift box">
+      <img src="images/gift.png" alt="Gift Box" />
+    </div>
+    <div class="gift-content" id="giftContent" aria-hidden="true">
+      <img src="images/cousin-gift.png" alt="Surprise Photo" class="gift-photo" />
+    </div>
+
+    <!-- Characters -->
+    <div class="characters">
+      <img src="images/luntik.png" alt="Luntik" class="char" />
+      <img src="images/malyshariki.png" alt="Malyshariki" class="char" />
+    </div>
+
+    <!-- Cozy Video Smaller -->
+    <section class="video-section">
+      <h2>☕️☕️☕️</h2>
+      <video controls autoplay muted loop class="cozy-video" playsinline>
+        <source src="videos/hot-chocolate.mp4" type="video/mp4" />
+        Your browser does not support the video tag.
+      </video>
+    </section>
+
+    <!-- Photo Gallery -->
+    <section class="gallery">
+      <h2 class="animated slide">📸 Favorite Moments</h2>
+      <div class="photos">
+        <img src="images/photo1.jpeg" alt="Photo 1" />
+        <img src="images/photo2.jpeg" alt="Photo 2" />
+        <img src="images/photo3.jpeg" alt="Photo 3" />
+        <img src="images/photo4.jpeg" alt="Photo 4" />
+        <img src="images/photo5.jpeg" alt="Photo 5" />
+      </div>
+    </section>
+
+    <!-- Dress Up Doll Game -->
+<section class="dressup-section">
+  <h2>👗 Dress Up Bella!</h2>
+  <div class="dressup-container">
+    
+    <!-- Base image shown first -->
+    <img id="dressImage" src="images/outfits/base.png" alt="Base Outfit" class="outfit-photo" />
+
+    <div class="dress-options">
+      <button onclick="changeOutfit('base.png')">Base Outfit</button>
+      <button onclick="changeOutfit('outfit1.png')">☀️</button>
+      <button onclick="changeOutfit('outfit2.png')">🎪</button>
+      <button onclick="changeOutfit('outfit3.png')">👖</button>
+    </div>
+  </div>
+</section>
+
+
+    <!-- Live Chat Wishes -->
+    <section class="wishes-section">
+      <h2>💬 Send Birthday Wishes!</h2>
+      <form id="wishForm">
+        <input
+          type="text"
+          id="wishInput"
+          placeholder="Type your wish here..."
+          maxlength="100"
+          autocomplete="off"
+          required
+        />
+        <button type="submit">Send</button>
+      </form>
+      <div id="wishesContainer"></div>
+    </section>
+
+    <!-- Background Birthday Song -->
+    <audio id="birthdaySong" autoplay loop>
+      <source src="music/happy.mp3" type="audio/mpeg" />
+    </audio>
+  </div>
+
+  <script src="script.js"></script>
+</body>
+</html>
